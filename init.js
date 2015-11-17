@@ -12,10 +12,20 @@ setup()
 run({codes: codes})
 
 function setup () {
-  var meta = document.createElement('meta')
-  meta.name = 'viewport'
-  meta.content = iOS9Viewport
-  document.head.appendChild(meta)
+  var viewport = document.createElement('meta')
+  viewport.name = 'viewport'
+  viewport.content = iOS9Viewport
+  document.head.appendChild(viewport)
+
+  var appleStandalone = document.createElement('meta')
+  appleStandalone.name = 'apple-mobile-web-app-capable'
+  appleStandalone.content = 'yes'
+  document.head.appendChild(appleStandalone)
+
+  var standalone = document.createElement('meta')
+  standalone.name = 'mobile-web-app-capable'
+  standalone.content = 'yes'
+  document.head.appendChild(standalone)
 
   document.body.style.margin = 0
 }
