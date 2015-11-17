@@ -32,7 +32,7 @@ Codes.render = function render (state) {
 function renderCode (onSelect, code, index) {
   var style = {
     width: '50%',
-    padding: '12px',
+    padding: '6px 12px',
     boxSizing: 'border-box'
   }
 
