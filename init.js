@@ -6,6 +6,7 @@ var Delegator = require('dom-delegator')
 var document = require('global/document')
 var iOS9Viewport = require('meta-viewport-ios-9')
 var App = require('./')
+var icons = require('./icons')
 var codes = require('./codes.json')
 
 setup()
@@ -26,6 +27,8 @@ function setup () {
   standalone.name = 'mobile-web-app-capable'
   standalone.content = 'yes'
   document.head.appendChild(standalone)
+
+  icons(document)
 
   document.body.style.margin = 0
 }
