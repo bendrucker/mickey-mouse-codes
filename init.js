@@ -31,6 +31,8 @@ function setup () {
   icons(document)
 
   document.body.style.margin = 0
+
+  document.title = 'Mickey Mouse'
 }
 
 function run (data) {
