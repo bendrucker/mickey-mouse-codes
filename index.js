@@ -13,7 +13,7 @@ var fs = require('fs')
 var Modal = require('./modal')
 var Codes = require('./codes')
 
-var subject = fs.readFileSync(__dirname + '/body.txt', 'utf8')
+var subject = fs.readFileSync(__dirname + '/subject.txt', 'utf8')
 var body = fs.readFileSync(__dirname + '/body.txt', 'utf8')
 
 module.exports = App

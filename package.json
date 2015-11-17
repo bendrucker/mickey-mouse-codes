@@ -11,17 +11,19 @@
     "url": "bendrucker.me"
   },
   "scripts": {
-    "test": "standard && tape test.js",
-    "open": "budo init.js --open"
+    "test": "standard",
+    "open": "budo init.js --open",
+    "build": "browserify init.js | htmlify > index.html"
   },
   "keywords": [
     "codes"
   ],
   "devDependencies": {
     "brfs": "~1.4.1",
+    "browserify": "~12.0.1",
     "budo": "~6.0.4",
-    "standard": "^5.0.0",
-    "tape": "^4.0.0"
+    "inline-htmlify": "~1.0.2",
+    "standard": "^5.0.0"
   },
   "dependencies": {
     "ap": "~0.2.0",
