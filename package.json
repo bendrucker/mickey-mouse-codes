@@ -37,6 +37,7 @@
     "observ": "~0.2.0",
     "observ-array": "~3.2.1",
     "observ-struct": "~6.0.0",
+    "preflex": "~1.0.0",
     "simple-format": "~1.0.0",
     "sms-link": "~1.0.0",
     "value-event": "~5.1.0",
