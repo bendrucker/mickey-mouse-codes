@@ -1,0 +1,49 @@
+{
+  "name": "mickey-mouse-codes",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Team Mickey Mouse codes",
+  "license": "MIT",
+  "repository": "bendrucker/mickey-mouse-codes",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js",
+    "open": "budo init.js --open"
+  },
+  "keywords": [
+    "codes"
+  ],
+  "devDependencies": {
+    "brfs": "~1.4.1",
+    "budo": "~6.0.4",
+    "standard": "^5.0.0",
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "ap": "~0.2.0",
+    "dom-delegator": "~13.1.0",
+    "dover": "~1.1.0",
+    "global": "~4.3.0",
+    "location-href": "~1.0.0",
+    "mailto-link": "~1.0.0",
+    "main-loop": "~3.2.0",
+    "meta-viewport-ios-9": "~1.0.1",
+    "observ": "~0.2.0",
+    "observ-array": "~3.2.1",
+    "observ-struct": "~6.0.0",
+    "simple-format": "~1.0.0",
+    "sms-link": "~1.0.0",
+    "value-event": "~5.1.0",
+    "virtual-dom": "~2.1.1",
+    "weakmap-event": "~2.0.6"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  }
+}
