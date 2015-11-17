@@ -51,7 +51,7 @@ Codes.render = function render (state) {
 function renderCode (onSelect, code, index) {
   var style = {
     width: '50%',
-    padding: '12px',
+    padding: '6px 12px',
     boxSizing: 'border-box'
   }
 
@@ -325,7 +325,7 @@ function best (a, b) {
 }
 
 
-var _rules // set at the bottom
+var _rules // set at the bottom  
 
 // note, naive implementation. will break on circular objects.
 
@@ -370,8 +370,8 @@ function oddElement(ary, cmp) {
 }
 var exports = module.exports = function (deps, exports) {
   var equal = (deps && deps.equal) || _equal
-  exports = exports || {}
-  exports.lcs =
+  exports = exports || {} 
+  exports.lcs = 
   function lcs() {
     var cache = {}
     var args = getArgs(arguments)
@@ -389,13 +389,13 @@ var exports = module.exports = function (deps, exports) {
       args.push(lcs(args.shift(), args.shift()))
       return lcs(args)
     }
-
+    
     //this would be improved by truncating input first
     //and not returning an lcs as an intermediate step.
     //untill that is a performance problem.
 
     var start = 0, end = 0
-    for(var i = 0; i < a.length && i < b.length
+    for(var i = 0; i < a.length && i < b.length 
       && equal(a[i], b[i])
       ; i ++
     )
@@ -417,13 +417,13 @@ var exports = module.exports = function (deps, exports) {
 
       if(equal(a[0], b[0]))
         return [head(a)].concat(recurse(tail(a), tail(b)))
-      else {
+      else { 
         var _a = recurse(tail(a), b)
         var _b = recurse(a, tail(b))
-        return cache[key(a,b)] = _a.length > _b.length ? _a : _b
+        return cache[key(a,b)] = _a.length > _b.length ? _a : _b  
       }
     }
-
+    
     var middleA = a.slice(start, a.length - end)
     var middleB = b.slice(start, b.length - end)
 
@@ -528,8 +528,8 @@ var exports = module.exports = function (deps, exports) {
     exports.chunk(args, function (index, unstable) {
       var mine = unstable[0]
       var insert = resolve(unstable)
-      if(equal(mine, insert)) return
-      r.push([index, mine.length].concat(insert))
+      if(equal(mine, insert)) return 
+      r.push([index, mine.length].concat(insert)) 
     })
     return r
   }
@@ -542,19 +542,19 @@ var exports = module.exports = function (deps, exports) {
       if(i == 0) // concestor was different, 'false conflict'
         return changes[1]
       if (~i)
-        return changes[i]
+        return changes[i] 
     }
-  exports.insertMergeOverDelete =
+  exports.insertMergeOverDelete = 
     //i've implemented this as a seperate rule,
     //because I had second thoughts about this.
     function insertMergeOverDelete (changes) {
       changes = changes.slice()
       changes.splice(1,1)// remove concestor
-
+      
       //if there is only one non empty change thats okay.
       //else full confilct
       for (var i = 0, nonempty; i < changes.length; i++)
-        if(changes[i].length)
+        if(changes[i].length) 
           if(!nonempty) nonempty = changes[i]
           else return // full conflict
       return nonempty
@@ -565,7 +565,7 @@ var exports = module.exports = function (deps, exports) {
   function resolve (changes) {
     var l = rules.length
     for (var i in rules) { // first
-
+      
       var c = rules[i] && rules[i](changes)
       if(c) return c
     }
@@ -2307,7 +2307,7 @@ function put(index, value) {
         null
 
     // fake splice diff
-    var valueArgs = index < originalLength ?
+    var valueArgs = index < originalLength ? 
         [index, 1, valueList[index]] :
         [index, 0, valueList[index]]
 
