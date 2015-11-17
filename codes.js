@@ -6,6 +6,7 @@ var Event = require('weakmap-event')
 var h = require('virtual-dom/h')
 var clickEvent = require('value-event/click')
 var partial = require('ap').partial
+var prefix = require('preflex')
 
 module.exports = Codes
 
@@ -22,10 +23,10 @@ var SelectEvent = Event()
 Codes.onSelect = SelectEvent.listen
 
 Codes.render = function render (state) {
-  var style = {
+  var style = prefix({
     display: 'flex',
     flexWrap: 'wrap'
-  }
+  })
   return h('codes', {style: style}, state.list.map(partial(renderCode, state.channels.select)))
 }
 

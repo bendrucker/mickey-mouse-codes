@@ -6,6 +6,7 @@ var partial = require('ap').partial
 var Event = require('weakmap-event')
 var h = require('virtual-dom/h')
 var clickEvent = require('value-event/click')
+var prefix = require('preflex')
 
 module.exports = Modal
 
@@ -38,7 +39,7 @@ Modal.render = function render (state) {
 }
 
 function renderOverlay (state, render) {
-  var style = {
+  var style = prefix({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -48,7 +49,7 @@ function renderOverlay (state, render) {
     width: '100%',
     height: '100%',
     background: 'rgba(0,0,0, .8)'
-  }
+  })
 
   var options = {
     'ev-click': clickEvent(state.channels.dismiss),
