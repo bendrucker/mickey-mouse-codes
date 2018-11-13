@@ -19,21 +19,21 @@
     "codes"
   ],
   "devDependencies": {
-    "brfs": "~1.4.1",
-    "browserify": "~12.0.1",
-    "budo": "~6.0.4",
-    "inline-htmlify": "~1.0.2",
-    "standard": "^5.0.0"
+    "brfs": "~2.0.1",
+    "browserify": "~16.2.3",
+    "budo": "~11.5.0",
+    "inline-htmlify": "~2.0.1",
+    "standard": "^12.0.1"
   },
   "dependencies": {
     "ap": "~0.2.0",
     "dom-delegator": "~13.1.0",
-    "dover": "~1.1.0",
+    "dover": "~1.2.0",
     "global": "~4.3.0",
     "location-href": "~1.0.0",
     "mailto-link": "~1.0.0",
-    "main-loop": "~3.2.0",
-    "meta-viewport-ios-9": "~1.0.1",
+    "main-loop": "~3.4.0",
+    "meta-viewport-ios-9": "~2.0.0",
     "observ": "~0.2.0",
     "observ-array": "~3.2.1",
     "observ-struct": "~6.0.0",
